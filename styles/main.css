@@ -1,0 +1,617 @@
+/* General Styles that flow across entire site */
+
+@import url(//db.onlinewebfonts.com/c/1333b13c4f911f3160f1c2822573f70c?family=Poor+Richard);
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p,
+blockquote {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: 'Poor Richard', serif;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #000;
+}
+
+.page-title {
+  font-size: 2rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 48rem) {
+  .page-title {
+    font-size: 3rem;
+  }
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.page-header img {
+  z-index: -1;
+}
+
+.site-container {
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.site-content {
+  max-width: 60rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* --General styles for the carousel on the merch/about page-- */
+/* no circle */
+.flickity-button {
+  background: transparent;
+}
+
+/* icon color */
+.flickity-button-icon {
+  fill: silver;
+}
+
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 2px solid white;
+}
+/* End of general site styles */
+
+/* Styles for the Pre Loader */
+#loader {
+  display: block;
+}
+
+.preload-overlay {
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/eye.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 500px 500px;
+  background-color: black;
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: 0 0 15px white, inset 0 0 15px white;
+  animation: pulse 2s linear 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 9px white, inset 0 0 9px white;
+  }
+  50% {
+    box-shadow: 0 0 30px white, inset 0 0 28px white;
+  }
+  100% {
+    box-shadow: 0 0 9px white, inset 0 0 9px white;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    background-size: 600px 600px;
+  }
+
+  .ring {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    background-size: 700px 700px;
+  }
+
+  .ring {
+    width: 50px;
+    height: 50px;
+  }
+}
+/* End of Preloader Styles */
+
+/* Index Page Styles */
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#fb-page {
+  border: 2px solid silver;
+  border-radius: 4px;
+}
+
+.music-player {
+  width: 100%;
+  margin-top: 2.5rem;
+  border: 2px solid silver;
+  border-radius: 4px;
+  background: white;
+}
+
+.streaming-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+@media (min-width: 48rem) {
+  #index-content {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+  }
+
+  .music-player {
+    margin-top: 0;
+    width: 25rem;
+    /* height: 31.25rem; */
+  }
+
+  .streaming-options {
+    margin-bottom: 2px;
+  }
+}
+/* End of Index Page Styles */
+
+/* Navigation */
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #000;
+}
+
+.grad-bar {
+  width: 100%;
+  height: 0.313rem;
+  background: linear-gradient(-45deg, white, black, grey, silver);
+  background-size: 400% 400%;
+  -webkit-animation: gradbar 15s ease infinite;
+  -moz-animation: gradbar 15s ease infinite;
+  animation: gradbar 15s ease infinite;
+}
+
+@keyframes gradbar {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  height: 6.25rem;
+  overflow: hidden;
+}
+
+.navbar img {
+  justify-self: start;
+  width: 9.375rem;
+  height: auto;
+  margin-left: 1.25rem;
+}
+
+.navbar ul {
+  position: fixed;
+  top: 6.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background-color: black;
+  width: 100%;
+  height: calc(100vh - 6.25rem);
+  margin-top: 0;
+  margin-right: 0;
+  overflow: hidden;
+  text-align: center;
+  list-style: none;
+  transform: translate(-101%);
+}
+
+.nav-item a {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease-out;
+}
+
+.nav-item a:hover {
+  color: silver;
+}
+
+.navbar li {
+  padding: 0.938rem;
+}
+
+.navbar li:first-child {
+  margin-top: 3.125rem;
+}
+
+.navbar li a {
+  font-size: 1rem;
+}
+
+.menu-toggle .bar {
+  width: 1.563rem;
+  height: 0.188rem;
+  margin: 0.313rem auto;
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle {
+  justify-self: end;
+  margin-right: 1.563rem;
+}
+
+.menu-toggle:hover {
+  cursor: pointer;
+}
+
+.menu-toggle,
+.bar {
+  display: block;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  transform: translate(0%) !important;
+}
+
+#mobile-menu.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+  -webkit-transform: translateY(0.5rem) rotate(45deg);
+  -ms-transform: translateY(0.5rem) rotate(45deg);
+  -o-transform: translateY(0.5rem) rotate(45deg);
+  transform: translateY(0.5rem) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3) {
+  -webkit-transform: translateY(-0.5rem) rotate(-45deg);
+  -ms-transform: translateY(-0.5rem) rotate(-45deg);
+  -o-transform: translateY(-0.5rem) rotate(-45deg);
+  transform: translateY(-0.5rem) rotate(-45deg);
+}
+
+@media (min-width: 48rem) {
+  .navbar ul {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: end;
+    list-style: none;
+  }
+
+  .navbar li {
+    padding: 0;
+    margin-right: 2.5em;
+  }
+
+  .navbar li:first-child {
+    margin-top: 0;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+/* End of Navigation Styles */
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000;
+}
+
+.social-links {
+  display: flex;
+  filter: invert(100%);
+}
+/* End of Footer Styles */
+
+/* Releases Page Styles */
+.soon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+.soon img {
+  border: 2px solid silver;
+}
+
+.soon h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  letter-spacing: 5px;
+  font-size: 24px;
+}
+
+.covers-row {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.covers img:hover {
+  opacity: 0.5;
+}
+
+.covers {
+  width: 350px;
+  margin-top: 10px;
+  background-color: white;
+}
+
+@media (min-width: 48rem) {
+  .covers-row {
+    flex-direction: row;
+  }
+}
+
+.releases-info {
+  padding: 3rem 1.25rem;
+  text-align: center;
+}
+/* End of Releases Page Styles */
+
+/* Merchandise Page Styles */
+.merch-carousel {
+  border: 2px solid silver;
+}
+
+.merch-carousel-cell {
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* End of Merchandise Page Styles */
+
+/* About Page Styles */
+.about-carousel {
+  border: 2px solid silver;
+}
+.about-carousel-cell {
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+}
+
+.flickity-viewport {
+  transition: height 0.2s;
+}
+
+.about-info {
+  box-sizing: content-box;
+  max-width: 34rem;
+  padding: 3rem 1.25rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 48rem) {
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+blockquote {
+  max-width: 55ch;
+  padding-left: 1.25rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.35;
+  border-left: 0.25rem solid;
+}
+
+blockquote:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  blockquote {
+    font-size: 1.25rem;
+  }
+}
+/* End of About Page Styles */
+
+/* Contact Page Styles */
+:focus {
+  outline: 0;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+label {
+  color: white;
+  font-size: 0.85em;
+  margin-left: 12px;
+}
+
+.contact-content {
+  padding: 12px 24px 24px 24px;
+  border: 2px solid silver;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+textarea:focus {
+  border: 1px solid red;
+}
+
+input[type='submit'] {
+  background: #64b5f6;
+  margin: 0 auto;
+  outline: 0;
+  color: white;
+  border: 0;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: all ease-in-out 0.1s;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+input[type='submit']:focus {
+  background: #a5d6a7;
+  color: balck;
+}
+
+input[type='submit']:hover {
+  background: #2196f3;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 12px 24px 24px 24px;
+  border: 2px solid silver;
+  border-radius: 4px;
+  opacity: 0.6;
+  background: black;
+  margin-top: 50px;
+}
+
+@media (min-width: 48rem) {
+  #site-content-row {
+    display: flex;
+    justify-content: center;
+  }
+  .info {
+    margin-top: unset;
+    width: 400px;
+    height: 500px;
+    opacity: 0.6;
+    padding: 12px 24px 24px 24px;
+    border: 2px solid silver;
+    border-radius: 4px;
+  }
+
+  .contact-content {
+    min-width: unset;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 100px;
+    opacity: 0.6;
+    border-radius: 4px;
+  }
+}
+
+aside p {
+  color: white;
+  text-align: justify;
+}
+
+.submit-button {
+  margin-top: 10px;
+  text-align: center;
+}
+/* End of Contact Page Styles */

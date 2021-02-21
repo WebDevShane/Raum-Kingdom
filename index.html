@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" /> -->
+
+    <title>Raum Kingdom</title>
+
+    <!-- <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="" />
+    <meta property="twitter:title" content="" />
+    <meta property="twitter:description" content="" />
+    <meta property="twitter:image" content="" /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0"
+    ></script>
+  </head>
+  <body>
+    <div class="preload-overlay">
+      <div class="ring"></div>
+    </div>
+    <div id="fb-root"></div>
+  
+    <video autoplay loop muted playsinline poster="images/background.png">
+      <source src="videos/background.mp4" type="video/mp4" />
+    </video>
+
+    <div class="nav-wrapper">
+      <div class="grad-bar"></div>
+      <nav class="navbar">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Raum Kingdom logo" />
+        </a>
+        <div id="mobile-menu" class="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="releases.html">Releases</a></li>
+          <li class="nav-item"><a href="merch.html">Merch</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <header class="page-header">
+      <img src="images/bandName_transparent.png" alt="Raum Kingdom" />
+    </header>
+    <main class="site-container">
+      <div id="index-content" class="site-content">
+        <div id="fb-page">
+        <div
+          class="fb-page"
+          data-href="https://www.facebook.com/Raum.Kingdom.ie"
+          data-tabs="timeline"
+          data-width="495"
+          data-height=495"
+          data-adapt-container-width="true"
+        ></div>
+        </div>
+        <div class="music-player">
+          <iframe
+            src="https://open.spotify.com/embed/album/4xnHns3vibDDdSS1sQ5wzW"
+            width="100%"
+            height="380"
+            frameborder="0"
+            allow="encrypted-media"
+          ></iframe>
+          <div class="streaming-options">
+            <a href="https://raumkingdom.bandcamp.com/music"
+              ><img src="images/bc.png" alt="Bandcamp"
+            /></a>
+            <a href="https://music.apple.com/ie/artist/raum-kingdom/868773746">
+              <img src="images/it.png" alt="itunes"
+            /></a>
+            <a href="https://soundcloud.com/raumkingdom">
+              <img src="images/sc.png" alt="Soundcloud" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <small>&copy; 2020 Raum Kingdom</small>
+      <div class="social-links">
+        <a href="https://www.facebook.com/Raum.Kingdom.ie/">
+          <img src="images/facebook.png" alt="Facebook logo" />
+        </a>
+        <a href="https://twitter.com/raumkingdom">
+          <img src="images/twitter.png" alt="Facebook logo" />
+        </a>
+      </div>
+    </footer>
+    <div class="grad-bar"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(window).on("load", function () {
+        $("body").css("overflow", "hidden");
+        $(".preload-overlay")
+          .delay(5000)
+          .fadeOut(3000, function () {
+            $("body").css("overflow", "auto");
+            $(".preload-overlay").remove();
+          });
+      });
+
+      $( window ).resize(function() {
+        var container_width = $('#pageContainer').width();    
+        $('#pageContainer').html(`<div class="fb-page" data-href="https://www.facebook.com/facebook" 
+        data-width="${container_width}" data-height="500" data-small-header="false" data-adapt-container-width="true" 
+        data-hide-cover="true" data-show-facepile="false" ><div class="fb-xfbml-parse-ignore">
+        <blockquote cite="https://www.facebook.com/facebook">
+        <a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div></div>`);
+        FB.XFBML.parse();    
+      });
+    </script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

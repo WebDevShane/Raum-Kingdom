@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" /> -->
+
+    <title>Raum Kingdom | Contact</title>
+
+    <!-- <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="" />
+    <meta property="twitter:title" content="" />
+    <meta property="twitter:description" content="" />
+    <meta property="twitter:image" content="" /> -->
+
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+  </head>
+  <body>
+    <video autoplay loop muted playsinline poster="images/background.png">
+      <source src="videos/background.mp4" type="video/mp4" />
+    </video>
+    <div class="nav-wrapper">
+      <div class="grad-bar"></div>
+      <nav class="navbar">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Raum Kingdom logo" />
+        </a>
+        <div id="mobile-menu" class="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="releases.html">Releases</a></li>
+          <li class="nav-item"><a href="merch.html">Merch</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <header class="page-header">
+      <h1 class="page-title">contact us</h1>
+    </header>
+    <main class="site-container">
+      <div id="site-content-row" class="site-content">
+        <div class="contact-content">
+          <h2>CONTACT US</h2>
+          <form method="POST" action="mail_handler.php" name="contact_form">
+            <label for="first_name">First Name</label>
+            <input name="first_name" type="text" required placeholder="John" />
+            <br />
+            <label for="last_name">Last Name</label>
+            <input name="last_name" type="text" required placeholder="Doe" />
+            <br />
+            <label for="email">Email</label>
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="you@domain.com"
+            />
+            <br />
+            <label for="message">Message</label><br />
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              placeholder="Enter your message here ..."
+              required
+            >
+            </textarea>
+            <div class="submit-button">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </div>
+        <aside class="info">
+          <h2>THANK YOU</h2>
+          <p>
+            For getting in touch or just leaving a message. You can also contact
+            us through our social media links at the bottom of the page.
+          </p>
+          <img src="images/logo.png" alt="Raum Kingdom Logo" />
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <small>&copy; 2020 Raum Kingdom</small>
+      <div class="social-links">
+        <a href="https://www.facebook.com/Raum.Kingdom.ie/">
+          <img src="images/facebook.png" alt="Facebook logo" />
+        </a>
+        <a href="https://twitter.com/raumkingdom">
+          <img src="images/twitter.png" alt="Facebook logo" />
+        </a>
+      </div>
+    </footer>
+    <div class="grad-bar"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
